@@ -59,6 +59,30 @@ streamlit run app.py
 
 Then open the provided Streamlit URL in your browser.
 
+## Deploy to Render
+
+This project includes a `render.yaml` file for Render deployment.
+
+1. Push the repository to GitHub.
+2. Create a Render account at https://render.com and connect your GitHub repo.
+3. Add the following environment variables in Render:
+
+```text
+GEMINI_API_KEY
+GITHUB_TOKEN
+```
+
+4. Use the default web service build command and start command from `render.yaml`:
+
+```text
+pip install -r requirements.txt
+streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+```
+
+5. Deploy the service on the `main` branch.
+
+> Keep `.env` local and do not commit it. Render will use environment variables configured in the dashboard.
+
 ## Environment Variables
 
 - `GEMINI_API_KEY`: API key for Google Gemini AI.
