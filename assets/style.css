@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Main container adjustments */
+.main .block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* Make header transparent so the sidebar toggle arrow remains visible */
+header[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+/* Hide the default Streamlit Deploy button */
+.stDeployButton {
+    display: none !important;
+}
+footer {
+    display: none !important;
+}
+
+/* Beautiful Sidebar */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+    border-right: 1px solid #334155;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+[data-testid="stSidebarNav"] span {
+    font-weight: 500;
+}
+
+/* Premium Primary Buttons */
+button[kind="primary"] {
+    background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.4) !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}
+button[kind="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.6) !important;
+    filter: brightness(1.1);
+}
+
+/* Custom Card Styling (Glassmorphism) */
+.metric-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.metric-card h3 {
+    color: #94A3B8;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.metric-card h2 {
+    color: #F8FAFC;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Streamlit Native Metrics Glow */
+[data-testid="stMetricValue"] {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    background: -webkit-linear-gradient(45deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-testid="stMetricLabel"] {
+    font-weight: 500 !important;
+    color: #94A3B8 !important;
+    font-size: 1rem !important;
+}
+
+/* Badges / Tags */
+.skill-badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    margin: 0.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.skill-badge:hover {
+    transform: scale(1.05);
+}
+
+.skill-badge.matched {
+    background: linear-gradient(90deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.3));
+    color: #34D399;
+    border: 1px solid #059669;
+}
+
+.skill-badge.missing {
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.3));
+    color: #F87171;
+    border: 1px solid #DC2626;
+}
+
+.skill-badge.neutral {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.3));
+    color: #60A5FA;
+    border: 1px solid #2563EB;
+}
+
+/* Custom hr */
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Headers */
+h1 {
+    font-weight: 800 !important;
+    background: -webkit-linear-gradient(90deg, #f8fafc, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+/* Expanders */
+.streamlit-expanderHeader {
+    font-weight: 600 !important;
+    color: #e2e8f0 !important;
+    background-color: rgba(30, 41, 59, 0.6) !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s ease;
+}
+.streamlit-expanderHeader:hover {
+    background-color: rgba(30, 41, 59, 0.9) !important;
+}
