@@ -1,0 +1,12 @@
+venv/
+.env
+.env.local
+.streamlit/
+.git/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+node_modules/
